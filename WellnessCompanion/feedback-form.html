@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Check-in - Wellness Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Wellness<span>Companion</span></a>
+        <div class="nav-links">
+            <a href="student-dashboard.html">Dashboard</a>
+            <a href="resource-hub.html">Resources</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <h2>Detailed Daily Check-in</h2>
+        <p>Taking a few moments to reflect can make a big difference. (This data remains confidential)</p>
+        
+        <div class="dashboard-grid">
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>Emotional Trend</h3>
+                <div class="chart-container">
+                    <canvas id="emotionTrendChart"></canvas>
+                </div>
+            </div>
+
+            <form class="card" style="grid-column: 1 / -1;">
+                <label for="sleep">How many hours did you sleep last night?</label>
+                <input type="number" id="sleep" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ddd; border-radius: 4px;">
+
+                <label for="stress">On a scale of 1-5, what was your academic stress level today?</label>
+                <select id="stress" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ddd; border-radius: 4px;">
+                    <option>1 - Very Low</option>
+                    <option>2 - Low</option>
+                    <option>3 - Moderate</option>
+                    <option>4 - High</option>
+                    <option>5 - Very High</option>
+                </select>
+
+                <label>What contributed most to your feelings today?</label>
+                <div style="margin-bottom: 15px;">
+                    <input type="checkbox" id="academics"><label for="academics"> Academics</label><br>
+                    <input type="checkbox" id="social"><label for="social"> Social Life</label><br>
+                    <input type="checkbox" id="family"><label for="family"> Family</label><br>
+                    <input type="checkbox" id="health"><label for="health"> Personal Health</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Today's Check-in</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

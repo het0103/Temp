@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Wellness Companion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Wellness<span>Companion</span></a>
+        <div class="nav-links">
+            <a href="student-dashboard.html">Dashboard</a>
+            <a href="resource-hub.html">Resources</a>
+            <a href="peer-forum.html">Peer Forum</a>
+            <a href="feedback-form.html">Daily Check-in</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Welcome back, Alex!</h2>
+        <p>How are you feeling today? Your well-being is a priority.</p>
+
+        <div class="dashboard-grid">
+            <div class="card mood-check-in">
+                <h3>Quick Mood Check-in</h3>
+                <div class="mood-options">
+                    <label>
+                        <input type="radio" name="mood">
+                        <span>😞</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="mood">
+                        <span>😐</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="mood" checked>
+                        <span>🙂</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="mood">
+                        <span>😊</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="mood">
+                        <span>😁</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="card ai-chat">
+                <h3>Need to talk?</h3>
+                <p>Our AI companion is ready to listen without judgment.</p>
+                <button id="openChatBtn" class="btn btn-primary">Start AI Chat</button>
+            </div>
+            
+            <div class="card journal">
+                <h3>Daily Journal</h3>
+                <textarea placeholder="What's on your mind today?"></textarea>
+                <button class="btn btn-secondary" style="margin-top: 10px; width: 100%;">Save Entry</button>
+            </div>
+
+            <div class="card stats">
+                <h3>Your Progress</h3>
+                <p>✅ You've checked in <strong>3</strong> days in a row!</p>
+                <p>📖 You explored <strong>2</strong> new resources this week.</p>
+                <p>➡️ Ready for a detailed check-in? <a href="feedback-form.html">Click here</a>.</p>
+            </div>
+        </div>
+    </main>
+    
+    <div id="aiChatModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>AI Wellness Chat</h2>
+            <p>This is a mock UI. You can build your chatbot interface here.</p>
+            <div class="chat-window" style="height: 300px; border: 1px solid #ccc; padding: 10px; margin-top: 15px; border-radius: 8px; overflow-y: scroll;">
+                <p><strong>AI:</strong> Hello! How can I support you today?</p>
+            </div>
+            <input type="text" placeholder="Type your message..." style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
